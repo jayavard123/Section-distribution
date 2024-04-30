@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Detail Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Detail Form</h1>
+        <form action="submit.php" method="POST">
+            <label for="studentNumber">Student Number:</label>
+            <input type="text" id="studentNumber" name="studentNumber" required>
+            
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+            
+            <label for="jeePercentage">JEE Percentage:</label>
+            <input type="number" id="jeePercentage" name="jeePercentage" step="0.01" required>
+            
+            <label for="atitScore">ATIT Score:</label>
+            <input type="number" id="atitScore" name="atitScore" required>
+            
+            <label for="emcetScore">EMCET Score:</label>
+            <input type="number" id="emcetScore" name="emcetScore" required>
+            
+            <label for="tenthScore">10th Score:</label>
+            <input type="number" id="tenthScore" name="tenthScore" required>
+            
+            <label for="twelfthScore">12th Score:</label>
+            <input type="number" id="twelfthScore" name="twelfthScore" required>
+            
+            <input type="submit" value="Submit">
+            <button onclick="goBack()">Go Back</button>
+        </form>
+    </div>
+</body>
+</html>

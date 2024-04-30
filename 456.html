@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branch and Section Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fae0e0; /* Light gray background color */
+            color: #333; /* Dark text color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff; /* White content background color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border: 2px solid rgb(216, 2, 2); /* Red border */
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(57, 0, 163); /* Red text color */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333; /* Dark text color */
+        }
+
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #f00; /* Red border */
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #f00; /* Red background color */
+            color: #fff; /* White text color */
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #37009e; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Branch and Section Details</h1>
+        <form id="sectionForm" method="post">
+            <label for="branch">Select Branch:</label>
+           
+            <select name="branch" id="branch" onchange="showSections()">
+                <option value="none">-- Select Branch --</option>
+                <option value="cse">Computer Science Engineering</option>
+                <option value="dsai">Data Science & AI</option>
+            </select>
+
+            <div id="sectionOptions" style="display: none;">
+                <label for="section">Select Section:</label>
+                <!-- <select name="section" id="section"> -->
+                    <select name="section" id="section" >
+                    <option value="none">-- Select Section --</option>
+                </select>
+            </div>
+
+            <button type="submit" style="display: none;">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function showSections() {
+            const branchSelect = document.getElementById('branch');
+            const sectionOptions = document.getElementById('sectionOptions');
+            const sectionSelect = document.getElementById('section');
+            const submitButton = document.querySelector('button[type="submit"]');
+
+            if (branchSelect.value === 'none') {
+                sectionOptions.style.display = 'none';
+                submitButton.style.display = 'none';
+            } else {
+                sectionOptions.style.display = 'block';
+
+                // Populate section options based on the selected branch
+                sectionSelect.innerHTML = ''; // Clear existing options
+
+                if (branchSelect.value === 'cse') {
+                    addOption(sectionSelect, 'Select Section', ' Select Section');
+                    addOption(sectionSelect, 'SEC-A', ' SEC-A');
+                    addOption(sectionSelect, 'SEC-B', ' SEC-B');
+                    addOption(sectionSelect, 'SEC-C', ' SEC-C');
+                    addOption(sectionSelect, 'SEC-D', ' SEC-D');
+                } else if (branchSelect.value === 'dsai') {
+                    addOption(sectionSelect, 'Select Section', ' Select Section');
+                    addOption(sectionSelect, 'SEC-E', ' SEC-E');
+                    addOption(sectionSelect, 'SEC-F', ' SEC-F');
+                    addOption(sectionSelect, 'SEC-G', ' SEC-G');
+                    addOption(sectionSelect, 'SEC-H', ' SEC-H');
+                }
+
+                submitButton.style.display = 'block';
+            }
+        }
+
+        function addOption(selectElement, value, text) {
+            const option = document.createElement('option');
+            option.value = value;
+            option.textContent = text;
+            selectElement.appendChild(option);
+        }
+    </script>
+</body>
+</html>

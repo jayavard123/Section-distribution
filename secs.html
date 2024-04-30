@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 1.2em;
+            border: 2px solid #007acc;
+            border-radius: 5px;
+        }
+
+        #sectionDetails {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Section</h1>
+        <select id="sectionSelect">
+            <option value="SEC-A">SEC-A</option>
+            <option value="SEC-B">SEC-B</option>
+            <option value="SEC-C">SEC-C</option>
+            <option value="SEC-D">SEC-D</option>
+            <option value="SEC-E">SEC-E</option>
+            <option value="SEC-F">SEC-F</option>
+            <option value="SEC-G">SEC-G</option>
+            <option value="SEC-H">SEC-H</option>
+        </select>
+
+        <div id="sectionDetails">
+            <!-- This will display the selected section details -->
+        </div>
+
+        <script>
+            document.getElementById('sectionSelect').addEventListener('change', function() {
+                var selectedSection = this.value;
+                var sectionDetailsElement = document.getElementById('sectionDetails');
+                sectionDetailsElement.textContent = 'You selected ' + selectedSection;
+            });
+        </script>
+    </div>
+</body>
+</html>

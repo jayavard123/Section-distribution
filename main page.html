@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Components of the Portal</title>
+    <style>
+
+        
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .cover {
+            width: 800px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .block {
+            flex-basis: calc(50% - 20px);
+            margin: 10px;
+            height: 150px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .recruiters {
+            background-color: navy;
+        }
+
+        .knowledge-trainings {
+            background-color: skyblue;
+        }
+
+        .opportunities {
+            background-color: aqua;
+        }
+
+        .student {
+            background-color: green;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 36px;
+            font-weight: bold;
+            color: black;
+            z-index: 1;
+        }
+
+        h1 {
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <div class="block recruiters">
+            <h1>Recruiters</h1>
+        </div>
+        <div class="block knowledge-trainings">
+            <h1>Knowledge Trainings</h1>
+        </div>
+        <div class="block opportunities">
+            <h1>Opportunities</h1>
+        </div>
+        <div class="block student"> 
+            <h1><a href="coverpage">Student</a></h1>
+        </div>
+        <div class="overlay">
+            IFHE
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9d0de;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .page-container {
+            border: 2px solid #3905f3; 
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .block {
+            flex: 0 1 calc(50% - 20px);
+            border: 2px solid #e0ffad;
+            cursor: pointer;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .student-details {
+            background-color: #f36cca; /* Blue color */
+            color: #fff;
+        }
+
+        .section-details {
+            background-color: #f3d83c; /* Green color */
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <div class="block student-details" onclick="toggleDetails('student')">
+            <h1><a href="studentsdetail.html">Student Details</a></h1>
+        </div>
+        <div class="block section-details" onclick="toggleDetails('section')">
+            <h1><a href="sectiondetails.html">branch details</a></h1>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails(type) {
+            
+        }
+    </script>
+
+</body>
+</html>
